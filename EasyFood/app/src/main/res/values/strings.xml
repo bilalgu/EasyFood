@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">EasyFood</string>
+
+    <!-- Page d'accueil -->
+    <string name="welcome_message">Bonjour User,</string>
+    <string name="welcome_message_1">Où mangeons-nous ?</string>
+    <string name="resto_proche">Les plus proches</string>
+    <string name="resto_mieux_note">Les mieux notés</string>
+    <string name="resto_name">Nom</string>
 </resources>
