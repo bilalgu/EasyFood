@@ -15,14 +15,14 @@
     </style>
 
     <!-- Style titre par default -->
-    <style name="DefaultTextStyle">
+    <style name="TitleTextStyle">
         <item name="android:textColor"> @color/white </item>
         <item name="android:textSize">22sp</item>
-        <item name="android:fontFamily">@font/Orkney-Regular</item>
+        <item name="android:fontFamily">@font/orkney_regular</item>
     </style>
 
     <!-- Style sous titre style par default -->
-    <style name="DefaultTextStyle" parent="DefaultTextStyle">
+    <style name="SubTitleTextStyle" parent="TitleTextStyle">
         <item name="android:textSize">18sp</item>
     </style>
 

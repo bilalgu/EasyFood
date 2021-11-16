@@ -14,17 +14,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="20sp"
-        android:layout_marginTop="50sp"
-        style="@style/DefaultTextStyle"/>
+        android:layout_marginTop="50sp" />
+        <!-- style="@style/TitleTextStyle" -->
 
     <TextView
         android:id="@+id/welcome_message_1"
-        style="@style/DefaultTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome_message_1"
         app:layout_constraintStart_toStartOf="@+id/welcome_message"
         app:layout_constraintTop_toBottomOf="@+id/welcome_message" />
+        <!-- style="@style/TitleTextStyle" -->
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
