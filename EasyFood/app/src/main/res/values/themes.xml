@@ -23,7 +23,12 @@
 
     <!-- Style sous titre style par default -->
     <style name="SubTitleTextStyle" parent="TitleTextStyle">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <!-- Style Titre Resto Liste par défaut -->
+    <style name="RestoTitleTextStyle" parent="TitleTextStyle">
+        <item name="android:textSize">16sp</item>
     </style>
 
 </resources>

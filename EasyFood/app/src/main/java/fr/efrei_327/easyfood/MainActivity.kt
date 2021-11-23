@@ -9,9 +9,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //injecter le fragment dans le fragment_container (dans activity_main)
+        //injecter le fragment dans le fragment_container (dans Main Activity)
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, HomeFragment())
+        transaction.replace(R.id.fragment_container, HomeFragment(this))
         transaction.addToBackStack(null)
         transaction.commit()
     }

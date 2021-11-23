@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,6 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="20sp"
+        style="@style/TitleTextStyle"
         android:layout_marginTop="50sp" />
         <!-- style="@style/TitleTextStyle" -->
 
@@ -22,15 +24,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome_message_1"
+        style="@style/TitleTextStyle"
         app:layout_constraintStart_toStartOf="@+id/welcome_message"
         app:layout_constraintTop_toBottomOf="@+id/welcome_message" />
         <!-- style="@style/TitleTextStyle" -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resto_proche"
+        android:layout_marginTop="50sp"
+        style="@style/SubTitleTextStyle"
+        app:layout_constraintStart_toStartOf="@+id/welcome_message_1"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_message_1" />
+    <!-- style="@style/SubTitleTextStyle" -->
 
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="110dp" />
+        android:layout_marginTop="195dp" />
 
 
 
