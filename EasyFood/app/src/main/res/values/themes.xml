@@ -30,5 +30,10 @@
     <style name="RestoTitleTextStyle" parent="TitleTextStyle">
         <item name="android:textSize">16sp</item>
     </style>
+    
+    <!-- Style barre de navigation -->
+    <style name="BottomNavigationStyle" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/orkney_regular</item>
+    </style>
 
 </resources>

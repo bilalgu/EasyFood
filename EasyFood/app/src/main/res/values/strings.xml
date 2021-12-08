@@ -7,4 +7,8 @@
     <string name="resto_proche">Les plus proches</string>
     <string name="resto_mieux_note">Les mieux notés</string>
     <string name="resto_name">Nom</string>
+    
+    <!-- Barre de navigation -->
+    <string name="bottom_home_item">Accueil</string>
+    <string name="bottom_add_resto_item">Ajout</string>
 </resources>
