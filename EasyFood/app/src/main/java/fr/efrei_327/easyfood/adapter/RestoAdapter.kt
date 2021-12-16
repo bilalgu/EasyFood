@@ -40,8 +40,9 @@ class RestoAdapter(
         //utiliser glide pour les images
         Glide.with(context).load(Uri.parse(currentResto.imageUrl)).into(holder.restoImage)
 
-        //mettre à jour le nom de la plante
+        //mettre à jour le nom du restaurant
         holder.restoName.text = currentResto.nom
+
     }
 
     //renvoit combien d'item on affiche dynamiquement

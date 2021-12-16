@@ -4,4 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <EditText
+        android:id="@+id/resto_adresse"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginTop="10sp"
+        android:hint="Adresse"
+        android:background="@color/white"/>
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginTop="10sp"
+        android:backgroundTint="@color/light_gray"
+        android:textColor="@color/black"
+        android:fontFamily="@font/orkney_regular"
+        android:text="@string/confirm_button"/>
+
+
+
 </LinearLayout>

@@ -11,4 +11,7 @@
     <!-- Barre de navigation -->
     <string name="bottom_home_item">Accueil</string>
     <string name="bottom_add_resto_item">Ajout</string>
+
+    <!-- Page d'ajout -->
+    <string name="confirm_button">Ajouter</string>
 </resources>

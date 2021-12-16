@@ -26,22 +26,34 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //importer la barre de navigation
-        val navigationView = findViewById<BottomNavigationView>(R.id.navigation_view)
-        navigationView.setOnNavigationItemSelectedListener {
-            when(it.itemId)
-            {
-                R.id.home_page -> {
-                    loadFragment(HomeFragment(this))
-                    return@setOnNavigationItemSelectedListener true
+        //charger le repository
+        val repo = RestoRepository()
+
+        //mettre à jour la liste de resto
+        repo.updateData{
+
+            //charger la page d'accueil
+            loadFragment(HomeFragment(this))
+
+            //importer la barre de navigation
+            val navigationView = findViewById<BottomNavigationView>(R.id.navigation_view)
+            navigationView.setOnNavigationItemSelectedListener {
+                when(it.itemId)
+                {
+                    R.id.home_page -> {
+                        loadFragment(HomeFragment(this))
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    R.id.add_resto_page -> {
+                        loadFragment(AddRestoFragment(this))
+                        return@setOnNavigationItemSelectedListener true
+                    }
+                    else -> false
                 }
-                R.id.add_resto_page -> {
-                    loadFragment(AddRestoFragment(this))
-                    return@setOnNavigationItemSelectedListener true
-                }
-                else -> false
             }
+
         }
+
 
     }
 
