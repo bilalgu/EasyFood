@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import fr.efrei_327.easyfood.MainActivity
 import fr.efrei_327.easyfood.R
-import fr.efrei_327.easyfood.RestoModel
 import fr.efrei_327.easyfood.RestoRepository.Singleton.restoList
-import fr.efrei_327.easyfood.adapter.RestoAdapter
+import fr.efrei_327.easyfood.RestoRepository.Singleton.restoListdistance
+import fr.efrei_327.easyfood.adapter.RestoAdapterHome
 
 class HomeFragment(
     private val context: MainActivity
@@ -21,14 +21,13 @@ class HomeFragment(
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view =  inflater?.inflate(R.layout.fragment_home, container, false)
 
-
-        //recuperer le 1er recyclerview
+        //recuperer le 1er recyclerview "les plus proches"
         val horizontalRecyclerView1 = view.findViewById<RecyclerView>(R.id.horizontal_recycler_view1)
-        horizontalRecyclerView1.adapter = RestoAdapter(context,restoList,R.layout.item_horizontal_proche)
+        horizontalRecyclerView1.adapter = RestoAdapterHome(context, restoListdistance,R.layout.item_horizontal_home)
 
         //recuperer le 2er recyclerview
         val horizontalRecyclerView2 = view.findViewById<RecyclerView>(R.id.horizontal_recycler_view2)
-        horizontalRecyclerView2.adapter = RestoAdapter(context,restoList,R.layout.item_horizontal_note)
+        horizontalRecyclerView2.adapter = RestoAdapterHome(context,restoList,R.layout.item_horizontal_home)
 
         return view
     }

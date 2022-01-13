@@ -5,6 +5,10 @@
         android:title="@string/bottom_home_item"
         android:icon="@drawable/ic_home"/>
 
+    <item android:id="@+id/search_page"
+        android:title="Recherche"
+        android:icon="@drawable/ic_search"/>
+
     <item android:id="@+id/add_resto_page"
         android:title="@string/bottom_add_resto_item"
         android:icon="@drawable/ic_add"/>

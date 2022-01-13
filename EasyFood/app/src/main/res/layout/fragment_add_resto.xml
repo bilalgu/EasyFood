@@ -4,19 +4,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quelle est votre merveilleuse découverte ?"
+        android:layout_marginTop="50sp"
+        android:layout_marginLeft="25sp"
+        style="@style/TitleTextStyle" />
+
+    <EditText
+        android:id="@+id/resto_nom"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginTop="80sp"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
+        android:hint="  Nom"
+        android:background="@drawable/searchview_background"/>
+
     <EditText
         android:id="@+id/resto_adresse"
         android:layout_width="match_parent"
         android:layout_height="40sp"
-        android:layout_marginTop="10sp"
-        android:hint="Adresse"
-        android:background="@color/white"/>
+        android:layout_marginTop="30sp"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
+        android:hint="  Adresse (double cliquer avant d'écrire)"
+        android:background="@drawable/searchview_background"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp">
+
+        <Button
+            android:id="@+id/upload_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Charger l'image"
+            android:backgroundTint="@color/light_gray"
+            android:textColor="@color/black"
+            android:fontFamily="@font/orkney_regular" />
+
+        <ImageView
+            android:id="@+id/preview_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chickenstreet"/>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/confirm_button"
         android:layout_width="match_parent"
         android:layout_height="60sp"
-        android:layout_marginTop="10sp"
+        android:layout_marginTop="70sp"
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
         android:backgroundTint="@color/light_gray"
         android:textColor="@color/black"
         android:fontFamily="@font/orkney_regular"

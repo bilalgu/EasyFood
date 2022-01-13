@@ -6,28 +6,29 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import fr.efrei_327.easyfood.MainActivity
-import fr.efrei_327.easyfood.R
-import fr.efrei_327.easyfood.RestoModel
+import fr.efrei_327.easyfood.*
 
-class RestoAdapter(
-    private val context: MainActivity,
+class RestoAdapterSearch(
+    val context: MainActivity,
     private val restoList: List<RestoModel>,
     private val layoutID: Int)
-    : RecyclerView.Adapter<RestoAdapter.ViewHolder>(){
+    : RecyclerView.Adapter<RestoAdapterSearch.ViewHolder>(){
 
     // permet de faire une boite de composant
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val restoImage = view.findViewById<ImageView>(R.id.image_item)
         val restoName = view.findViewById<TextView>(R.id.image_name)
+        val restoDistance = view.findViewById<TextView>(R.id.search_resto_distance)
     }
+
 
     //permet d'injecter item_horizontal_proche
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-                   .inflate(layoutID, parent, false)
+            .inflate(layoutID, parent, false)
 
         return ViewHolder(view)
     }
@@ -42,9 +43,20 @@ class RestoAdapter(
 
         //mettre à jour le nom du restaurant
         holder.restoName.text = currentResto.nom
+        holder.restoDistance.text = currentResto.distance.toString().substring(0,4)
+
+        //interaction lors du clic sur un resto
+        holder.itemView.setOnClickListener{
+            val dialog = RestoPopupSearch(this,currentResto)
+
+            // aficher la popup
+            val ft: FragmentTransaction = context.supportFragmentManager.beginTransaction()
+            dialog.show(ft, RestoPopupSearch.TAG)
+
+        }
 
     }
 
-    //renvoit combien d'item on affiche dynamiquement
-    override fun getItemCount(): Int = 5
+    override fun getItemCount(): Int = restoList.size
+
 }
